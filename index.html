@@ -11,7 +11,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 
@@ -21,13 +26,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Page Content -->
   <!-- Header/Home -->
-  <br><br><br><br><br><br>
   <header class="w3-container  w3-center w3-black" id="home">
     <h1  class="w3-jumbo"><span class="w3-hide-small"></span></h1> <!-- schick ma an link -->
   </header>
 
     <!-- Footer -->
-  <footer align=center class="w3-content w3-text-grey w3-xlarge">
+  <footer align=center class="container">
     <a href="https://www.facebook.com/fsjmeyer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/fsjmeyer"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="http://www.snapchat.com/add/fsjmeyer"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
