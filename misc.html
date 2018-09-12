@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>&#8498;. Meyer</title>
+
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="style" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+#countup {
+    text-align: center;
+}
+#countup p {
+    display: inline-block;
+    padding: 10px;
+    background: #151515;
+    margin: 0 0 20px;
+    border-radius: 3px;
+    color: white;
+    min-width: 2.6rem;
+}
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+</style>
+
+<body class="w3-black">
+    <header class="w3-container  w3-center w3-black" id="home">
+        <h1  class="w3-jumbo"><span class="w3-hide-small"></span></h1>
+    </header>
+
+  <footer align=center class="container">
+      <div id="countup">
+        <p id="years">00</p>
+        <p class="timeRefYears">Jahre</p>
+          <br>
+        <p id="days">00</p>
+        <p class="timeRefDays">d</p>
+        <p id="hours">00</p>
+        <p class="timeRefHours">h</p>
+        <p id="minutes">00</p>
+        <p class="timeRefMinutes">m</p>
+        <p id="seconds">00</p>
+        <p class="timeRefSeconds">s</p>
+      </div>
+      <script>
+      /*
+* Basic Count Up from Date and Time
+* Author: @guwii / guwii.com
+*/
+window.onload=function() {
+  // Month,Day,Year,Hour,Minute,Second
+  upTime('sep,14,2018,00:00:00'); // ****** Change this line!
+}
+function upTime(countTo) {
+  now = new Date();
+  countTo = new Date(countTo);
+  difference = (now-countTo);
+  years = Math.floor(days / 365);
+  if (years > 1){ days = days - (years * 365)}
+  days=Math.floor(difference/(60*60*1000*24)*1);
+  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+
+  document.getElementById('days').firstChild.nodeValue = days;
+  document.getElementById('hours').firstChild.nodeValue = hours;
+  document.getElementById('minutes').firstChild.nodeValue = mins;
+  document.getElementById('seconds').firstChild.nodeValue = secs;
+
+  clearTimeout(upTime.to);
+  upTime.to=setTimeout(function(){ upTime(countTo); },1000);
+}
+    </script>
+    <a href="hint.html">hint.</a>
+  </footer>
+
+</body>
+</html>
