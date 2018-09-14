@@ -46,8 +46,10 @@
       <div id="countup">
           Nächster HT
           <br>
+          <br>
         <p id="days">00</p>
         <p class="timeRefDays">Tage</p>
+          <br>
         <p id="hours">00</p>
         <p class="timeRefHours">Stunden</p>
 
@@ -74,9 +76,8 @@ function upTime(countTo) {
 
   document.getElementById('days').firstChild.nodeValue = days;
   document.getElementById('hours').firstChild.nodeValue = hours;
-  document.getElementById('minutes').firstChild.nodeValue = mins;
-  document.getElementById('seconds').firstChild.nodeValue = secs;
-Math.fl
+  //document.getElementById('minutes').firstChild.nodeValue = mins;
+  //document.getElementById('seconds').firstChild.nodeValue = secs;
 
   clearTimeout(upTime.to);
   upTime.to=setTimeout(function(){ upTime(countTo); },1000);
